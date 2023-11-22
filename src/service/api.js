@@ -26,33 +26,3 @@ export const getImages = async (query, page) => {
     throw error;
   }
 };
-
-// const API_KEY = '39876586-8a2f0cc49d6159d0bf3e975f6';
-// const URL = 'https://pixabay.com/api/';
-
-// export async function getImages(query, page) {
-//   const params = new URLSearchParams({
-//     image_type: 'photo',
-//     orientation: 'horizontal',
-//     safesearch: 'true',
-//     per_page: 12,
-//   });
-
-//   try {
-//     const response = await axios.get(
-//       `${URL}?key=${API_KEY}&q=${query}&${params}&page=${page}`
-//     );
-
-//     if (response.data.hits.length === 0) {
-//       toast.error(
-//         'Sorry, there are no images matching your search query. Please try again.'
-//       );
-
-//       return;
-//     }
-
-//     return response.data;
-//   } catch (error) {
-//     toast.error(error.message);
-//   }
-// }
